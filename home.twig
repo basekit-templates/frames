@@ -9,10 +9,15 @@
       <header class="bk-header">
           <div class="header-container wrapper clearfix">
             <div class="companyheader clearfix">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {"business": "FRAMES"})|raw}}
+                  <div class="header-left">
+                      {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                      {{widget('companyname', 'companyname', {"business": "FRAMES"})|raw}}
+                  </div>
+                  <div class="header-right">
+                      {{widget('extendednavigation', 'navigationheader', {})|raw}}
+                      {{widget('ecombasket', 'ecombasket', {})|raw}}
+                  </div>
             </div>
-              {{widget('extendednavigation', 'navigationheader', {})|raw}}
           </div>
       </header> 
     </div>
@@ -25,13 +30,13 @@
                       {{widget('content', 'textbox2', {content: '<h4>Delivery Information</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus.', lines: 'all'})|raw}}
                   </div>
                   <div class="content-right">
-                    {{widget('content', 'textbox3', {content: '<h4>Returns Policy</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus accumsan.', lines: 'all'})|raw}}
+                      {{widget('content', 'textbox3', {content: '<h4>Returns Policy</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus accumsan.', lines: 'all'})|raw}}
                   </div>
               </div>
           </div>
       </div>
 
-      <div class="wrapper clearfix">
+      <div class="canvas wrapper clearfix">
           <a name="anchor"></a>
               {{widget('ecombasket', 'ecombasket', {})|raw}}
               {{widget('ecomcheckout', 'ecomcheckout', {})|raw}}

@@ -7,10 +7,15 @@
       <header class="bk-header">
           <div class="header-container wrapper clearfix">
             <div class="companyheader clearfix">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+                  <div class="header-left">
+                      {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                      {{widget('companyname', 'companyname', {"business": "FRAMES"})|raw}}
+                  </div>
+                  <div class="header-right">
+                      {{widget('extendednavigation', 'navigationheader', {})|raw}}
+                      {{widget('ecombasket', 'ecombasket', {})|raw}}
+                  </div>
             </div>
-              {{widget('extendednavigation', 'navigationheader', {})|raw}}
           </div>
       </header> 
           <div class="wrapper clearfix">

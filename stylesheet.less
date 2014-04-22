@@ -55,15 +55,6 @@ h1, h2, h3, h4, h5, p {
     padding: 0 0 10px;
 }
 
-header.bk-header p {
-    font-family:@font-swatch8-font-family;
-    font-weight: @font-swatch8-font-weight;
-    color:@font-swatch8-color;
-    line-height:@font-swatch8-line-height;
-    letter-spacing: @font-swatch8-letter-spacing;
-    font-size: @font-swatch8-font-size;           
-}
-
 .widget.feature .feature-bgimg .content {
     background-color: rgba(1, 1, 1, 0.2);
 }
@@ -238,6 +229,49 @@ header.bk-header {
             }
         }
 
+
+.companyheader {
+    width:100%;
+            .header-left {
+                float:left; 
+                .widget.profile span {
+                    float:left;
+                }
+                    .widget.content { 
+                    @media @tablet {
+                        margin:0px auto;
+                        display:table;
+                        text-align:center;
+                        }
+                    }
+                @media @tablet {
+                    width:100%;
+                    margin-top:20px;
+                    padding:0;
+                }
+            }
+
+            .header-right {
+                float:right;
+                .widget.profile span {
+                    float:right;
+                }
+                .widget.profile {
+                    @media @tablet {
+                        margin: 0px auto;
+                        display: table;
+                        text-align: center;
+                    }
+                }
+                @media @tablet {
+                    width:100%;
+                    margin-top:0;
+                    margin-bottom:20px;
+                    padding:0;
+                }
+            }
+        }
+
 /* ===============================
    2. DEFAULT PAGE
    =============================== */
@@ -267,8 +301,13 @@ header.bk-header {
     margin-top:40px;
 }
 
-.bk-pt-default .widget .extendednavigation {
-    padding:10px 0px;
+.bk-pt-default .widget.extendednavigation {
+    margin-right:0;
+    min-height:0!important;
+}
+
+.bk-pt-default .widget.ecombasket .ecombasket-list-container {
+    z-index:9999;
 }
 
 /* ===============================
@@ -520,9 +559,9 @@ header.bk-header {
    EXTENDED NAVIGATION
    =============================== */
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 944px) {
     .widget .extendednavigation {
-        max-width:350px;
+        max-width:250px;
     }
 }
 
@@ -548,10 +587,11 @@ header.bk-header {
         position: relative;
         display: inline-block;
         float: right;
-        min-height: 50px;
         padding:5px 0px;
+        margin-right:150px;
         @media @tablet {
             background-color: transparent;
+            margin-right:0;
         }
         li {
             ul {
@@ -567,8 +607,9 @@ header.bk-header {
                 display: none;
                 /* Then these styles are applied */
                 width: 100%;
-                margin-top:50px;
+                margin-top:40px;
                 background-color:@color-swatch3;
+                position:absolute;
             }
             li {
                 float: left;
@@ -1317,16 +1358,26 @@ header.bk-header {
 }   
 .widget.ecombasket {
     .ecombasket-pull {
-        width: auto;
         padding: 15px 0;
-        background-color: transparent;
+        float:right;
+        border:2px solid @color-swatch1;
+        width:120px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        &:hover{
+            background-color:lighten(@color-swatch3,5%);
+            }
         @media @tablet {
-            width:150px;
-            padding: 10px;
-            background-color: @font-swatch7-background-color;
+            width:120px;
+            padding:10px;
+            margin:0px auto;
+            display:table;
+            float:none;
+            left:0;
+            top:50px;
         }
         @media @mobile {
-            width:100%;
             text-align: center;
         }
         p, .basket-count {
@@ -1359,18 +1410,24 @@ header.bk-header {
         display: none;
         text-align: left;
         border: 1px solid fade(@color-swatch5,8%);
-        -webkit-border-radius: 0 0 5px 5px;
-        -moz-border-radius: 0 0 5px 5px;
-        border-radius: 0 0 5px 5px;
         background-color: @color-swatch1;
         padding: 0 1em 0.5em;
         max-height: 300px;
         overflow-y: scroll;
+        float:right;
+        margin-top:20px;
+        position: absolute;
+        right: 0;
+        top: 50px;
         @media @tablet {
             max-height: 400px;
             border: none;
             background-color: darken(@color-swatch1,5%);
             right: 0;
+            float:none;
+            position:relative;
+            top: 120px;
+            margin-top:0;
         }
         ul {
             display: inline-block;
@@ -1462,10 +1519,13 @@ header.bk-header {
                 font-size: @font-swatch7-font-size;
                 font-weight: @font-swatch7-font-weight;
                 line-height: @font-swatch7-line-height;
-                background-color: @font-swatch7-background-color;
+                background-color: @color-swatch3;
                 border: none;
                 display: block;
                 text-align: center;
+                &:hover {
+                    background-color: lighten(@color-swatch3,10%);
+                        }
                 @media @tablet {
                     display: inline-block;
                 }
@@ -1488,6 +1548,7 @@ header.bk-header {
         color:@color-swatch1;
     }
 }
+
 /* ===============================
   ECOM - CHECKOUT
    =============================== */
@@ -2598,7 +2659,7 @@ blockquote:before {
         float:none;
     }
     .widget .extendednavigation ul {
-        position:relative;
+        position:absolute;
         z-index:99999;
     }
     .bk-pt-default .widget.menusections {
@@ -2638,6 +2699,13 @@ blockquote:before {
     }
     .widget.feature .feature-bgimg .content h3 {
         margin-top:0;
+    }
+    .bk-pt-default .widget.ecombasket .ecombasket-list-container {
+        width:100%;
+        position:absolute;
+    }
+    .bk-pt-default .header-container {
+        padding: 30px 0px 120px 0px;
     }
 }
 
