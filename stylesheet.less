@@ -139,19 +139,6 @@ header.bk-header {
     padding:30px 0px;
 }
 
-.widget.extendednavigation .bk-overlay {
-    position: absolute;
-    right: 0px;
-    left: auto!important;
-    top: 0px;
-    bottom: 0px;
-    z-index: 8000;
-    cursor: pointer;
-    width: 60%;
-    float: right;
-    height: 60px;
-}
-
 .twitter ul li a {
     font-weight:400;
     font-size:@font-swatch4-font-size;
@@ -583,6 +570,10 @@ header.bk-header {
     line-height: 0;
 }
 
+.widget.extendednavigation {
+        margin-right:150px;
+    }
+
 .widget {
     .extendednavigation {
         float: none;
@@ -590,7 +581,6 @@ header.bk-header {
         display: inline-block;
         float: right;
         padding:5px 0px;
-        margin-right:150px;
         @media @tablet {
             background-color: transparent;
             margin-right:0;
@@ -1353,7 +1343,7 @@ header.bk-header {
 }   
 .widget.ecombasket {
     .ecombasket-pull {
-        padding: 15px 0;
+        padding: 10px 0;
         float:right;
         border:2px solid @color-swatch1;
         width:120px;
@@ -2343,6 +2333,7 @@ button.btn:hover {
     width:70%;
     border:0;
     background-color:darken(@color-swatch1,5%);
+    text-indent:10px;
     @media @tablet {
         width: 90%;
     }
@@ -2602,6 +2593,7 @@ blockquote:before {
         margin: 0px auto;
         display: table;
         float:none;
+        width:100%;
     }
 
     .widget.companyname {
@@ -2702,6 +2694,13 @@ blockquote:before {
     }
     .bk-pt-default .header-container {
         padding: 30px 0px 120px 0px;
+    }
+
+    .header-container {
+        padding-top:10px;
+    }
+    .widget.extendednavigation {
+        margin-right:0;
     }
 }
 
