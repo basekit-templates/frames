@@ -231,7 +231,9 @@ header.bk-header {
 
 
 .companyheader {
-    width:100%;
+        display: block;
+        padding: 0;
+        margin: 6px 0 0;
             .header-left {
                 float:left; 
                 .widget.profile span {
@@ -424,8 +426,8 @@ header.bk-header {
 }
 
 .widget.feature .feature-bgimg .content button:hover {
-    background-color:@color-swatch1;
-    color:@font-swatch4-color;
+    background-color:@color-swatch3;
+    border:2px solid transparent;
 }
 
 .widget.feature button:hover {
@@ -821,13 +823,6 @@ header.bk-header {
 /* ===============================
    HEADER
    =============================== */
-
-.companyheader {
-    display: block;
-    float: left;
-    padding: 0;
-    margin: 6px 0 0;
-}
 
 /* COMPANY NAME */
 
@@ -1367,6 +1362,7 @@ header.bk-header {
         right: 0;
         &:hover{
             background-color:lighten(@color-swatch3,5%);
+            border:2px solid transparent;
             }
         @media @tablet {
             width:120px;

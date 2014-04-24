@@ -3,7 +3,6 @@
 
 {% block content %}
 
-<div class="full-height">
     <div class="featureimage">
           {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
       <header class="bk-header">
@@ -11,7 +10,7 @@
             <div class="companyheader clearfix">
                   <div class="header-left">
                       {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                      {{widget('companyname', 'companyname', {"business": "FRAMES"})|raw}}
+                      {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
                   </div>
                   <div class="header-right">
                       {{widget('extendednavigation', 'navigationheader', {})|raw}}
@@ -20,21 +19,6 @@
             </div>
           </div>
       </header> 
-    </div>
-        <div class="content-background">
-              <div class="content-container wrapper">
-                  <div class="content-left">
-                      {{widget('content', 'textbox1', {content: '<h4>About Us</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus accumsan varius est fermentum malesuada. ', lines: 'all'})|raw}}
-                  </div>
-                  <div class="content-center">
-                      {{widget('content', 'textbox2', {content: '<h4>Delivery Information</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus.', lines: 'all'})|raw}}
-                  </div>
-                  <div class="content-right">
-                      {{widget('content', 'textbox3', {content: '<h4>Returns Policy</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus accumsan.', lines: 'all'})|raw}}
-                  </div>
-              </div>
-          </div>
-      </div>
 
       <div class="canvas wrapper clearfix">
           <a name="anchor"></a>
@@ -44,13 +28,11 @@
               {{widget('ecomproduct', 'ecomproduct', {})|raw}}
               {{zone('main')|raw}}
       </div>
-
-      </div>
           
       <footer class="bk-footer">
               <div class="footer-container wrapper clearfix">
                   <div class="footer-left">
-                      {{widget('companyname', 'companyname', {"business": "FRAMES"})|raw}}
+                      {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
                   </div>
                   <div class="footer-center">
                       {{widget('content', 'textbox4', {content: '<h4>Delivery Information</h4> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan.</p>', lines: 'all'})|raw}}
