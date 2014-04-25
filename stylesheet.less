@@ -1402,7 +1402,7 @@ header.bk-header {
         max-height: 300px;
         overflow-y: scroll;
         float:right;
-        margin-top:20px;
+        margin-top:10px;
         position: absolute;
         right: 0;
         top: 50px;
@@ -1510,6 +1510,7 @@ header.bk-header {
                 border: none;
                 display: block;
                 text-align: center;
+                width:100%;
                 &:hover {
                     background-color: lighten(@color-swatch3,10%);
                         }
@@ -2483,6 +2484,32 @@ blockquote:before {
 }
 
 /* ===============================
+   8. SIDE IPHONE WIDTH
+   =============================== */
+
+@media only screen and (min-width: 550px) and (max-width: 600px)  {
+    .widget.feature .feature-bgimg .content h3 {
+        display:none;
+    }
+    .widget.ecombasket {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+    }
+    .widget.ecombasket .ecombasket-pull {
+        left:auto;
+    }
+    .bk-pt-default .widget.ecombasket {
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+    .bk-pt-default .widget.ecombasket .ecombasket-pull {
+        left:0;
+    }
+}
+
+/* ===============================
    9. IPAD WIDTH
    =============================== */
 
@@ -2706,6 +2733,12 @@ blockquote:before {
     .bk-pt-default .widget.ecombasket .ecombasket-pull:hover {
         background-color: @color-swatch3;
         border: 2px solid transparent;
+    }
+    .bk-pt-default .widget.extendednavigation {
+        margin: 0px auto;
+    }
+    .bk-pt-default .widget.ecombasket .ecombasket-pull:hover {
+        background-color:lighten(@color-swatch3,10%);
     }
 }
 
