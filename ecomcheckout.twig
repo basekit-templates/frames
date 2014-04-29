@@ -3,35 +3,28 @@
 
 {% block content %}
 
-    <div class="featureimage">
-          {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+<div class="bk-pt-default">
       <header class="bk-header">
           <div class="header-container wrapper clearfix">
             <div class="companyheader clearfix">
                   <div class="header-left">
                       {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                      {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+                      {{widget('companyname', 'companyname', {"business": "FRAMES"})|raw}}
                   </div>
                   <div class="header-right">
                       {{widget('extendednavigation', 'navigationheader', {})|raw}}
-                      {{widget('ecombasket', 'ecombasket', {})|raw}}
                   </div>
             </div>
           </div>
       </header> 
-
-      <div class="canvas wrapper clearfix">
-      {{widget('ecombasket', 'ecombasket', {})|raw}}
-    {{widget('ecomcheckout', 'ecomcheckout', {})|raw}}
-    {{widget('ecomproductslist', 'ecomproductslist', {})|raw}}
-    {{widget('ecomproduct', 'ecomproduct', {})|raw}}
-              {{zone('main')|raw}}
-      </div>
-          
+          <div class="wrapper clearfix">
+                  {{zone('main')|raw}}
+          </div>
+              
       <footer class="bk-footer">
               <div class="footer-container wrapper clearfix">
                   <div class="footer-left">
-                      {{widget('companyname', 'companynamefooter', {"business": "profile"})|raw}}
+                      {{widget('companyname', 'companynamefooter', {"business": "FRAMES"})|raw}}
                   </div>
                   <div class="footer-center">
                       {{widget('content', 'textbox2', {content: '<h4>Delivery Information</h4> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan.</p>', lines: 'all'})|raw}}
@@ -41,6 +34,6 @@
                   </div>
                 </div>
       </footer>
+</div>
 
 {% endblock %}
-
