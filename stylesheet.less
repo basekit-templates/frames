@@ -1270,7 +1270,23 @@ header.bk-header {
                     width: 100%;
                 }
                 select {
-                    -webkit-appearance: menulist;
+                    -webkit-appearance: none;
+                    -moz-appearance: window;
+                    appearance: none;
+                    outline: none !important;
+                    -moz-outline-style: none;
+                    border: 2px solid @color-swatch3;
+                    position: relative;
+                    background: transparent;
+                    padding: 10px 23px 10px 10px;
+                    -moz-border-radius: 0px;
+                    -webkit-border-radius: 0px;
+                    border-radius: 0px;
+                    background-image: image('/images/arrow.png');
+                    background-position: right 4% center;
+                    background-repeat: no-repeat;
+                    border: 0;
+                    background-color: @color-swatch1;
                 }
             }
             .ecom-product-cattag {
@@ -1704,7 +1720,7 @@ header.bk-header {
             appearance: none;
             outline: none !important;
             -moz-outline-style: none;
-            border: 1px solid @color-swatch5, 25%;
+            border: 2px solid @color-swatch3;
             position: relative;
             background: @color-swatch1;
             padding: 8px 23px 8px 10px;
@@ -1712,7 +1728,7 @@ header.bk-header {
             -webkit-border-radius: 0px;
             border-radius: 0px;
             background-image: image('/images/arrow.png');
-            background-position: 98% center;
+            background-position: right 7% center;
             background-repeat: no-repeat;
         }
         .delivery-price-tax {
@@ -1791,15 +1807,15 @@ select {
     appearance: none;
     outline: none !important;
     -moz-outline-style: none;
-    border: 1px solid @color-swatch5, 25%;
+    border: 2px solid @color-swatch3;
     position: relative;
     background: transparent;
-    padding: 8px 23px 8px 10px;
+    padding: 10px 23px 10px 10px;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     border-radius: 0px;
     background-image: image('/images/arrow.png');
-    background-position: 94% center;
+    background-position: right 7% center;
     background-repeat: no-repeat;
 }
 
@@ -2783,6 +2799,10 @@ blockquote:before {
     }
     .bk-pt-default .widget.ecombasket .ecombasket-pull:hover {
         background-color:lighten(@color-swatch3,10%);
+    }
+    select {
+        width:100%;
+        background-position: 98% center;
     }
 }
 
