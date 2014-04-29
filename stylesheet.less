@@ -1168,17 +1168,17 @@ header.bk-header {
             padding-top: 20px;
             .ecom-productslist-title {
                 text-align: center;
-                font-family: @font-swatch5-font-family;
-                font-size: @font-swatch5-font-size;
-                font-weight: @font-swatch5-font-weight;
-                line-height: @font-swatch5-line-height;
-                letter-spacing: @font-swatch5-letter-spacing;
+                font-family: @font-swatch3-font-family;
+                font-size: @font-swatch3-font-size;
+                font-weight: @font-swatch3-font-weight;
+                line-height: @font-swatch3-line-height;
+                letter-spacing: @font-swatch3-letter-spacing;
                 a {
-                    color: @font-swatch5-color;
+                    color: @font-swatch1-color;
                 }
             }
             .ecom-productlist-price {
-                color: @color-swatch3;
+                color: @font-swatch5-color;
             }
         }
     }
@@ -1241,18 +1241,18 @@ header.bk-header {
                 margin-left: 0;
             }
             .ecom-product-title {
-                color: @font-swatch5-color;
-                font-size: @font-swatch5-font-size;
-                line-height: @font-swatch5-color;
-                font-weight: @font-swatch5-font-weight;
-                font-family: @font-swatch5-font-family;
-            }
-            .ecom-product-price {
                 color: @font-swatch2-color;
                 font-size: @font-swatch2-font-size;
                 line-height: @font-swatch2-color;
                 font-weight: @font-swatch2-font-weight;
                 font-family: @font-swatch2-font-family;
+            }
+            .ecom-product-price {
+                color: @font-swatch5-color;
+                font-size: @font-swatch5-font-size;
+                line-height: @font-swatch5-color;
+                font-weight: @font-swatch5-font-weight;
+                font-family: @font-swatch5-font-family;
             }
             .ecom-product-variation {
                 background-color: darken(@color-swatch1,5%);
@@ -1582,7 +1582,9 @@ header.bk-header {
     table {
         border-spacing: 0;
         width: 100%;
-        border: 2px solid black;
+        border-right: 2px solid @color-swatch3;
+        border-left: 2px solid @color-swatch3;
+        border-bottom: 2px solid @color-swatch3;
         padding: 20px;
         margin-bottom: 20px;
         tr {
@@ -1728,7 +1730,7 @@ header.bk-header {
             -webkit-border-radius: 0px;
             border-radius: 0px;
             background-image: image('/images/arrow.png');
-            background-position: right 7% center;
+            background-position: right 2% center;
             background-repeat: no-repeat;
         }
         .delivery-price-tax {
@@ -1815,8 +1817,16 @@ select {
     -webkit-border-radius: 0px;
     border-radius: 0px;
     background-image: image('/images/arrow.png');
-    background-position: right 7% center;
+    background-position: right 6% center;
     background-repeat: no-repeat;
+}
+
+.widget.ecomproductslist .ecom-productslist-product .ecom-productlist-info .ecom-productslist-title a {
+    font-family: @font-swatch3-font-family;
+    color: @font-swatch3-color;
+    font-size: @font-swatch3-font-size;
+    font-weight: @font-swatch3-font-weight;
+    line-height: @font-swatch3-line-height;
 }
 
 /* ===============================
@@ -2272,8 +2282,7 @@ footer.bk-footer {
     color: @font-swatch5-color;
     text-indent: 12px;
     margin-bottom: 20px;
-    background-color:darken(@color-swatch1,10%);
-    border:0;
+    border:2px solid @color-swatch3;
 }
 
 .widget.contactform form fieldset textarea {
@@ -2287,8 +2296,7 @@ footer.bk-footer {
     margin-bottom: 20px;
     resize: none;
     padding: 10px 0px 100px 0px;
-    background-color:darken(@color-swatch1,10%);
-    border:0;
+    border:2px solid @color-swatch3;
 }
 
 .widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
@@ -2394,8 +2402,8 @@ button.btn:hover {
 
 .signupform fieldset input {
     width:70%;
-    border:0;
-    background-color:darken(@color-swatch1,5%);
+    border:2px solid @color-swatch3;
+    background-color:transparent;
     text-indent:10px;
     @media @tablet {
         width: 90%;
@@ -2425,6 +2433,8 @@ button.btn:hover {
 
 .widget.profile form fieldset input {
     width:65%;
+    border:2px solid @color-swatch3;
+    background-color:transparent;
     @media @tablet {
         width: 90%;
     }
@@ -2457,8 +2467,8 @@ button.btn:hover {
 
 .blog-search-input {
     width:65%;
-    border:0;
-    background-color:darken(@color-swatch1,5%);
+    border:2px solid @color-swatch3;
+    background-color:transparent;
     padding:10px 0px;
 }
 
