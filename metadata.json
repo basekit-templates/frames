@@ -2,11 +2,11 @@
     "name":"Frames",
     "thumbnail":"frames.png",
     "screenshot":"frames.png",
-    "pageTypes": ["home", "default", "about", "contact", "gallery"],
+    "pageTypes": ["home", "default", "about", "contact", "gallery", "ecomcheckout"],
     "tags": {
-    "en": ["minimal", "clean", "photography", "vintage", "modern", "sunglasses", "website", "ecommerce", "elegant", "professional", "unique", "media", "sans-serif"],
-    "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
-    "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
+    "en": ["minimal", "clean", "photography", "vintage", "modern", "sunglasses", "website", "ecommerce", "elegant", "professional", "unique", "media", "sans-serif", "ecommerce"],
+    "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif", "ecommerce"],
+    "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif", "ecommerce"]
     },
     "colorSwatches":
     {
