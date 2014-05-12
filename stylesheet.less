@@ -606,6 +606,7 @@ header.bk-header {
         display: inline-block;
         float: right;
         padding:5px 0px;
+        z-index:9999;
         @media @tablet {
             background-color: transparent;
             margin-right:0;
@@ -2530,7 +2531,7 @@ blockquote:before {
    =============================== */
 
 @media only screen and (min-width: 550px) and (max-width: 600px)  {
-    .widget.feature .feature-bgimg .content h3 {
+    .widget.feature .feature-bgimg .content h2, .widget.feature .feature-bgimg .content h3, .widget.feature .feature-bgimg .content button.btn {
         display:none;
     }
     .widget.ecombasket {
@@ -2830,12 +2831,12 @@ blockquote:before {
           letter-spacing:bkscale(@font-swatch2-letter-spacing,0.5);
     }
     .widget.feature .feature-bgimg .content h2 {
-          font-size: bkscale(@font-swatch8-font-size,0.5);
-          line-height:bkscale(@font-swatch8-line-height,0.5);
+          font-size: bkscale(@font-swatch8-font-size,0.4);
+          line-height:bkscale(@font-swatch8-line-height,0.4);
     }
     .widget.feature .feature-bgimg .content h3 {
           font-size: bkscale(@font-swatch9-font-size,0.8);
-          line-height:bkscale(@font-swatch9-line-height,0.7);
+          line-height:bkscale(@font-swatch9-line-height,0.8);
     }
     .bk-content-text h2 {
         font-size: bkscale(@font-swatch3-font-size,1.2);
