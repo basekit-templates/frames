@@ -2533,17 +2533,17 @@ blockquote:before {
 @media only screen and (min-width: 550px) and (max-width: 600px)  {
 
     .widget.feature .feature-bgimg .content {
-        padding:14em 0em;
+        padding:14em 0em!important;
     }
     .canvas {
-        padding: 310px 0px 0px 0px;
+        padding: 310px 0px 0px 0px!important;
     }
     .widget.feature .feature-bgimg .content .spare {
-        height: 300px;
+        padding-top:140px!important;
     }
 
     .widget.ecombasket .ecombasket-pull {
-        left:auto;
+        left:0!important;
     }
     .bk-pt-default .widget.ecombasket {
         position: relative;
@@ -2552,6 +2552,10 @@ blockquote:before {
     }
     .bk-pt-default .widget.ecombasket .ecombasket-pull {
         left:0;
+    }
+    .widget.logo img {
+        width: auto;
+        max-height: 50px;
     }
 }
 
@@ -2874,11 +2878,6 @@ blockquote:before {
         background-color: transparent;
     }
 
-    .widget.logo img {
-        width:60px;
-        margin-left:5px;
-    }
-
     .widget.profile .bk-profile-socialicons {
         padding:0;
     }
@@ -2905,9 +2904,6 @@ blockquote:before {
         margin-top:50px;
         padding-top:50px;
     }
-    .widget.logo img {
-        width: 80%;
-    }
     .featurebtn-container {
         margin-top: -120px;
         padding-bottom: 80px;
@@ -2923,6 +2919,11 @@ blockquote:before {
         position: absolute;
         bottom: 30px;
         left: 33px;
+    }
+
+    .widget.logo img {
+        width: auto;
+        max-height: 140px;
     }
 }
 
