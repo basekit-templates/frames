@@ -2,9 +2,9 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-
-    <div class="featureimage">
-          {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+<div class="header-contain">
+      <div class="featureimage">
+          {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}} 
       <header class="bk-header">
           <div class="header-container wrapper clearfix">
             <div class="companyheader clearfix">
@@ -18,8 +18,9 @@
                   </div>
             </div>
           </div>
-      </header> 
-</div>
+      </header>
+      </div>
+  </div>
 
 <div class="canvas wrapper clearfix">
       {{zone('main')|raw}}
