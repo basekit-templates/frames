@@ -2,6 +2,7 @@
     "name":"Frames",
     "thumbnail":"frames.png",
     "screenshot":"frames.png",
+    "templateType":"ecommerce",
     "pageTypes": ["home", "default", "about", "contact", "gallery", "ecomcheckout"],
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "sunglasses", "website", "ecommerce", "elegant", "professional", "unique", "media", "sans-serif", "ecommerce"],
