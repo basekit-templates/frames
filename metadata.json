@@ -3,9 +3,9 @@
     "thumbnail":"frames.png",
     "screenshot":"frames.png",
     "templateType":"ecommerce",
-    "pageTypes": ["home", "default", "about", "contact", "gallery", "ecomcheckout"],
+    "pageTypes": ["home", "default"],
     "tags": {
-    "en": ["minimal", "clean", "photography", "vintage", "modern", "sunglasses", "website", "ecommerce", "elegant", "professional", "unique", "media", "sans-serif", "ecommerce"],
+    "en": ["minimal", "clean", "ecommerce", "glasses", "modern", "sunglasses", "website", "full", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif", "ecommerce"],
     "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif", "ecommerce"]
     },

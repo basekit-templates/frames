@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, p {
     font-size: @font-swatch5-font-size; 
 }
 
-.widget.profile span {
+.widget.profile span, .widget.profile p {
     font-family:@font-swatch9-font-family;
     font-weight: @font-swatch9-font-weight;
     color:@font-swatch9-color;
@@ -264,7 +264,6 @@ header.bk-header {
 
             .header-right {
                 float:right;
-                width: 50%;
                 .widget.profile span {
                     float:right;
                 }
@@ -609,11 +608,9 @@ header.bk-header {
 .widget.extendednavigation {
         margin-right:150px;
     }
-    
 
 .widget {
     .extendednavigation {
-        width: 100%;
         float: none;
         position: relative;
         display: inline-block;
@@ -630,6 +627,7 @@ header.bk-header {
             }
         }
         ul {
+            float: right;
             text-align: center;
             padding: 0;
             @media @tablet {
@@ -1307,10 +1305,10 @@ header.bk-header {
                     background-repeat: no-repeat;
                     border: 0;
                     background-color: @color-swatch1;
-               -moz-appearance: none;
-               text-indent: 0.01px;
-               text-overflow: '';
-               cursor: pointer;
+                    -moz-appearance: none;
+                    text-indent: 0.01px;
+                    text-overflow: '';
+                    cursor: pointer;
 select::-ms-expand {
                display: none;
            }
@@ -1399,24 +1397,24 @@ select::-ms-expand {
 .widget.ecombasket {
     .ecombasket-pull {
         padding: 10px 0;
+        float:right;
         width:130px;
-        height:42px;
+        height:45px;
         position: absolute;
         top: 0;
         right: 0;
         background-color:@color-swatch3;
         &:hover{
             background-color:lighten(@color-swatch3,5%);
-        }
+            }
         @media @tablet {
-            width: 120px;
-            padding: 10px;
-            margin: 0px auto;
-            min-height: 40px;
-            display: block;
-            left: 0;
-            top: 50px;
-            position: relative;
+            width:120px;
+            padding:10px;
+            margin:0px auto;
+            display:table;
+            float:none;
+            left:0;
+            top:50px;
         }
         @media @mobile {
             text-align: center;
@@ -1440,7 +1438,7 @@ select::-ms-expand {
             width: 21px;
             margin: 0 10px 0 0;
             position: relative;
-            top: 1px;
+            top:1px;
         }
     }
    
@@ -2045,7 +2043,7 @@ footer.bk-footer {
    =============================== */
 
 .widget {
-    &.blogpostlist {
+    &.bloglistposts {
         .blog-post-item {
             border-bottom: 1px dotted @color-swatch5;
         }
@@ -2438,6 +2436,7 @@ footer.bk-footer {
     border:2px solid @color-swatch3;
     background-color:transparent;
     padding:10px 0px;
+    border-radius:0;
 }
 
 /* ===============================
@@ -2512,7 +2511,7 @@ footer.bk-footer {
 
 button.btn {
     background-color:@color-swatch3;
-    padding:15px;
+    padding:8px 14px;
     color: @font-swatch7-color;
     border-radius:0;
 }
@@ -2524,6 +2523,11 @@ button.btn:hover {
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
+}
+
+input, textarea {
+    border:2px solid @color-swatch3;
+    border-radius:0;
 }
 
 /* ===============================
