@@ -638,7 +638,6 @@ header.bk-header {
         }
         ul {
             float: right;
-            text-align: center;
             padding: 0;
             @media @tablet {
                 /* Hidden until nav icon is clicked */
@@ -720,14 +719,6 @@ header.bk-header {
                         letter-spacing: @font-swatch6-letter-spacing;
                         position: relative;
                         &:after {
-                            content: "\25BC";
-                            font-size: 8px;
-                            position: absolute;
-                            top: 1px;
-                            display: block;
-                            z-index: 9999999;
-                            right: 0;
-                            color: @color-swatch1;
                             @media @tablet {
                                 font-size: 10px;
                                 padding-right: 10px;
@@ -812,10 +803,6 @@ header.bk-header {
     color:@font-swatch6-color;
 }
 
-.widget .extendednavigation ul li.folder:after {
-    display: none;
-}
-
 .bk-pt-default .widget.extendednavigation {
     background-color:none;
     min-height:50px;
@@ -853,6 +840,10 @@ header.bk-header {
     border-radius:0;
     box-shadow:none;
     margin-top:20px; 
+}
+
+.widget .extendednavigation ul li.folder:after {
+    border-top-color: @color-swatch1;
 }
 
 
