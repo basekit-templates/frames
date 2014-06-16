@@ -1176,6 +1176,47 @@ header.bk-header {
 
 } /* end .widget.menu */
 
+
+/* ===============================
+  ECOM - FEATURED PRODUCTS
+   =============================== */
+
+.widget.ecomfeaturedproducts {
+    text-align: center;
+    .ecom-featuredproducts-header h2 {
+        text-align: center;
+        padding: 1.5em 0;
+        @media @tablet {
+            padding: 1em;
+        }
+    }
+    .ecom-featuredproducts-wrap .ecom-featuredproducts-product {
+        a:hover {
+            color: @color-swatch2;
+        }
+        .ecom-featuredproducts-image-wrap {
+            margin-bottom: 20px;
+            height: 300px;
+            @media @mobile {
+                height: 250px;
+            }
+        }
+        .ecom-featuredproducts-info {
+            .ecom-featuredproducts-title {
+                text-align: center;
+                font-family: @font-swatch3-font-family;
+                font-size: @font-swatch3-font-size;
+                font-weight: @font-swatch3-font-weight;
+                line-height: @font-swatch3-line-height;
+                letter-spacing: @font-swatch3-letter-spacing;
+            }
+            .ecom-featuredproducts-price {
+                color: @font-swatch5-color;
+            }
+        }
+    }
+}
+
 /* ===============================
   ECOM - PRODUCTLIST
    =============================== */
@@ -1192,9 +1233,6 @@ header.bk-header {
                 font-weight: @font-swatch3-font-weight;
                 line-height: @font-swatch3-line-height;
                 letter-spacing: @font-swatch3-letter-spacing;
-                a {
-                    color: @font-swatch1-color;
-                }
             }
             .ecom-productlist-price {
                 color: @font-swatch5-color;
@@ -1214,6 +1252,7 @@ header.bk-header {
             width: 55%;
             float: left;
             margin-bottom: 1em;
+            margin-right: 4%;
             @media @tablet {
                 width:100%;
             }
@@ -1254,7 +1293,6 @@ header.bk-header {
         .ecom-product-info {
             width: 41%;
             display: inline-block;
-            margin-left: 4%;
             @media @tablet {
                 width: 100%;
                 margin-left: 0;
@@ -1386,6 +1424,24 @@ select::-ms-expand {
   ECOM - BASKET
    =============================== */
 
+.header-right .widget.ecombasket {
+    .ecombasket-pull {
+        position: absolute;
+        float: right;
+        @media @tablet {
+            top: 50px;
+        }
+    }
+    .ecombasket-list-container {
+        position: absolute;
+        float: right;
+        top: 40px;
+        @media @tablet {
+            top:100px;
+        }
+    }
+}
+
 .tablet-basket-container {
     display: none;
     @media @tablet {
@@ -1398,10 +1454,10 @@ select::-ms-expand {
 .widget.ecombasket {
     .ecombasket-pull {
         padding: 10px 0;
-        float:right;
+        float:none;
         width:130px;
         height:45px;
-        position: absolute;
+        position: relative;
         top: 0;
         right: 0;
         background-color:@color-swatch3;
@@ -1415,7 +1471,7 @@ select::-ms-expand {
             display:table;
             float:none;
             left:0;
-            top:50px;
+            top:0px;
         }
         @media @mobile {
             text-align: center;
@@ -1454,11 +1510,10 @@ select::-ms-expand {
         padding: 0 1em 0.5em;
         max-height: 300px;
         overflow-y: scroll;
-        float:right;
+        float:none;
         margin-top:10px;
-        position: absolute;
+        position: relative;
         right: 0;
-        top: 50px;
         @media @tablet {
             max-height: 400px;
             border: none;
@@ -1466,7 +1521,7 @@ select::-ms-expand {
             right: 0;
             float:none;
             position:relative;
-            top: 120px;
+            top: 0px;
             margin-top:0;
         }
         ul {
@@ -1850,13 +1905,13 @@ select {
     background-image: image('/images/arrow.png');
     background-position: right 6% center;
     background-repeat: no-repeat;
-               -moz-appearance: none;
-               text-indent: 0.01px;
-               text-overflow: '';
-               cursor: pointer;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+}
 select::-ms-expand {
-               display: none;
-           }
+   display: none;
 }
 
 .widget.ecomproductslist .ecom-productslist-product .ecom-productlist-info .ecom-productslist-title a {
@@ -2795,7 +2850,7 @@ blockquote:before {
     }
     .bk-pt-default .widget.ecombasket .ecombasket-list-container {
         width:100%;
-        position:absolute;
+        position:relative;
     }
     .bk-pt-default .header-container {
         padding: 30px 0px 120px 0px;
@@ -2816,6 +2871,12 @@ blockquote:before {
     .bk-pt-default .widget.ecombasket .ecombasket-pull:hover {
         background-color:lighten(@color-swatch3,10%);
     }
+    .widget.ecomproductslist .productlist-filter .productlist-display-form .form-group.productlist-search {
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
     select {
         width:100%;
         background-position: 98% center;
@@ -2826,9 +2887,7 @@ blockquote:before {
     .widget .extendednavigation ul li.folder ul {
         padding:0;
     }
-    .widget.ecombasket .ecombasket-list-container {
-        top:60px;
-    }
+
 }
 
 /* ===============================
