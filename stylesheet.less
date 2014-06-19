@@ -2274,13 +2274,59 @@ footer.bk-footer {
 }
 
 /* ===============================
-   BUTTON WIDGET
+   BUTTONS
    =============================== */
 .widget.button button {
     background:@color-swatch3;
+    margin-bottom:5px;
     &:hover {
         background: lighten(@color-swatch3,10%);
     }
+}
+
+.contactform button.btn,
+button.btn,
+.btn,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.dropbox button,
+.clicktocall a,
+.signupform fieldset button,
+.blog-search-form button,
+.widget.socialicons span a,
+.widget.profile .bk-profile-socialicons span a,
+.widget.feature .feature-bgimg .content button,
+.template-footer .widget.profile .bk-profile-socialicons span a,
+.blog-search-form button,
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+.widget.ecomcheckout table tr td .checkout-quantitybtn button,
+.widget.ecomcheckout .checkout-order-button {
+    border: 0;
+    cursor: pointer;
+    background-color: @font-swatch7-background-color;
+    -webkit-appearance: none;
+    font-family:@font-swatch7-font-family;
+    font-weight: @font-swatch7-font-weight;
+    -webkit-font-smoothing: antialiased;
+    color:@font-swatch7-color;
+    line-height:@font-swatch7-line-height;
+    letter-spacing: @font-swatch7-letter-spacing;
+    font-size: @font-swatch7-font-size;
+    padding: 6px 14px 8px;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    transition: .2s;
+    border-radius: 2px;
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+    }
+}
+
+.template-footer .widget.profile .bk-profile-socialicons span a,
+.widget.profile .bk-profile-socialicons span a,
+.widget.socialicons span a {
+    padding: 0;
 }
 
 /* ===============================
