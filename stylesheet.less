@@ -265,6 +265,9 @@ header.bk-header {
             .header-right {
                 float:right;
                 height:60px;
+                @media @tablet {
+                    float: none;
+                }
                 .widget.profile span {
                     float:right;
                 }
@@ -1438,7 +1441,9 @@ select::-ms-expand {
         float: right;
         top: 40px;
         @media @tablet {
-            top:100px;
+            position: relative;
+            margin: 0 auto;
+            top: 95px;
         }
     }
 }
@@ -1512,7 +1517,7 @@ select::-ms-expand {
         padding: 0 1em 0.5em;
         max-height: 300px;
         overflow-y: scroll;
-        float:none;
+        float: none;
         margin-top:10px;
         position: relative;
         right: 0;
@@ -1521,7 +1526,7 @@ select::-ms-expand {
             border: none;
             background-color: darken(@color-swatch1,5%);
             right: 0;
-            float:none;
+            float: none;
             position:relative;
             top: 0px;
             margin-top:0;
