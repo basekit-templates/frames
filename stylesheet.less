@@ -266,7 +266,7 @@ header.bk-header {
                 float:right;
                 height:60px;
                 @media @tablet {
-                    float: none;
+                    float: left;
                 }
                 .widget.profile span {
                     float:right;
@@ -1441,6 +1441,7 @@ select::-ms-expand {
         float: right;
         top: 40px;
         @media @tablet {
+            float: none;
             position: relative;
             margin: 0 auto;
             top: 95px;
@@ -1471,7 +1472,7 @@ select::-ms-expand {
             background-color:lighten(@color-swatch3,5%);
             }
         @media @tablet {
-            width: 120px;
+            width: 50%;
             padding: 10px;
             margin: 0px auto;
             min-height: 40px;
@@ -1941,6 +1942,9 @@ a.checkout-empty-link.btn {
 
 .widget.ecombasket.show-content .ecombasket-list-container {
     width:30%;
+    @media @tablet {
+        width: 50%;
+    }
 }
 
 /* ===============================
@@ -2302,10 +2306,8 @@ button.btn,
 .blog-search-form button,
 .widget.socialicons span a,
 .widget.profile .bk-profile-socialicons span a,
-.widget.feature .feature-bgimg .content button,
 .template-footer .widget.profile .bk-profile-socialicons span a,
 .blog-search-form button,
-.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
 .widget.ecomcheckout table tr td .checkout-quantitybtn button,
 .widget.ecomcheckout .checkout-order-button {
     border: 0;
