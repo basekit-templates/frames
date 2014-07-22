@@ -455,16 +455,13 @@ header.bk-header {
 
 .widget.feature .feature-bgimg .content button {
     height: 45px;
-    background-color:@color-swatch3;
+    background-color:@color-swatch3!important;
     padding:8px 60px;
+    border-radius:0;
 }
 
 .widget.feature .feature-bgimg .content button:hover {
-    background-color:lighten(@color-swatch3,5%);
-}
-
-.widget.feature button:hover {
-    background-color:transparent;
+    background-color:lighten(@color-swatch3,5%)!important;
 }
 
 /* ===============================
@@ -2280,6 +2277,7 @@ footer.bk-footer {
 .widget.button button {
     background:@color-swatch3;
     margin-bottom:5px;
+    padding:15px;
     &:hover {
         background: lighten(@color-swatch3,10%);
     }
@@ -2318,7 +2316,7 @@ button.btn,
     -moz-transition: .2s;
     -ms-transition: .2s;
     transition: .2s;
-    border-radius: 2px;
+    border-radius:0;
     &:hover {
         background-color: @font-swatch7-background-color-hover;
     }
@@ -2613,7 +2611,7 @@ button.btn,
 
 .widget.button button:hover {
       cursor: pointer;
-  background-color: lighten(@color-swatch3,10%);
+      background-color: lighten(@color-swatch3,10%);
       -webkit-transition: background-color 0.15s ease-in-out;
       -moz-transition: background-color 0.15s ease-in-out;
       -o-transition: background-color 0.15s ease-in-out;
@@ -2942,6 +2940,12 @@ blockquote:before {
     .widget .extendednavigation ul li.folder ul {
         padding:0;
     }
+    .widget.feature .feature-bgimg .content .spare {
+        position: relative;
+        bottom: 30px;
+        left:0;
+        margin-top: 300px;
+    }
 
 }
 
@@ -3078,6 +3082,12 @@ blockquote:before {
     .widget.twitter ul li a {
         text-decoration: none;
         word-wrap: break-word;
+    }
+    .widget.feature .feature-bgimg .content .spare {
+        position: relative;
+        bottom: 30px;
+        left:0;
+        margin-top: 250px;
     }
 }
 
