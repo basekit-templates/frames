@@ -632,6 +632,14 @@ header.bk-header {
             background-color: transparent;
             margin-right:0;
         }
+
+        ul.align-left {
+            .folder:after {
+                right: auto;
+                left: 15px;   
+            }
+        }
+
         li {
             ul {
                 display: none !important;
@@ -652,10 +660,9 @@ header.bk-header {
             li {
                 float: left;
                 display: block;
-                padding: 5px 0;
+                padding: 0;
                 @media @tablet {
                     width: 100%;
-                    padding: 1em 0;
                     border-bottom:1px dotted rgb(48, 46, 46);
                 }
                 &:last-child {
@@ -671,7 +678,7 @@ header.bk-header {
                         background-color: lighten(@color-swatch3,15%);
                         z-index: 500;
                         padding: 0;
-                        margin: 5px 0 0 0;
+                        margin: 0;
                         li {
                             display: block;
                             width: 100%;
@@ -687,31 +694,45 @@ header.bk-header {
 
                 a {
                     display: block;
-                    padding: 0 15px;
                     font-family: @font-swatch6-font-family;
                     font-size: @font-swatch6-font-size;
                     font-weight: @font-swatch6-font-weight;
                     color: @font-swatch6-color;
                     line-height: @font-swatch6-line-height;
                     letter-spacing: @font-swatch6-letter-spacing;
+                    padding: 0;
                     &:hover {
                         text-decoration: underline;
                     }
                 }
 
+                .text {
+                    padding: 15px;
+                    display: block;
+                }
+
                 &.folder {
                     /* Folder dropdown arrow BG style goes Here */  
-                    margin-right: 20px;            
                     cursor: pointer;
                     background-image: none;
+                    margin-right: 0;
                     @media @tablet {
                         background-image:image('/images/texture-background.png');
                         background-repeat: repeat;
                         background-position: center;
+                       
                     }
+
+                    &:after {
+                        right: 15px;   
+                    }
+
+                    & > .text {
+                        padding-right: 30px;
+                        padding-left: 30px;
+                    }
+
                     .text {
-                        display: block;
-                        padding: 0 15px;
                         font-family: @font-swatch6-font-family;
                         font-size: @font-swatch6-font-size;
                         font-weight: @font-swatch6-font-weight;
@@ -719,12 +740,8 @@ header.bk-header {
                         line-height: @font-swatch6-line-height;
                         letter-spacing: @font-swatch6-letter-spacing;
                         position: relative;
-                        &:after {
-                            @media @tablet {
-                                font-size: 10px;
-                                padding-right: 10px;
-                            }
-                        }
+                        
+                        
                         @media @tablet {
                                 color: @color-swatch5;
                             }
@@ -736,23 +753,17 @@ header.bk-header {
                         }
                     }
                     ul {
-                        padding: 10px 0px;
                         @media @tablet {
-                            margin-top: 14px;
+                            margin-top: 0;
                         }
                         li {
                             a { 
                                 .text {
                                     color: @font-swatch6-color;
-                                    padding: 0;
-                                    &:after {
-                                        content: "";
-                                    }
                                 }
                             }
                         }
                     }
-
                 }
             }
         }
