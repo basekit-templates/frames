@@ -263,8 +263,7 @@ header.bk-header {
             }
 
             .header-right {
-                float:right;
-                height:60px;
+                float: right;
                 @media @tablet {
                     float: left;
                 }
@@ -322,9 +321,7 @@ header.bk-header {
 }
 
 .bk-pt-default .widget.extendednavigation {
-    margin-right:0;
     min-height:0!important;
-    margin-right:150px;
 }
 
 .bk-pt-default .widget.ecombasket .ecombasket-list-container {
@@ -617,16 +614,18 @@ header.bk-header {
 }
 
 .widget.extendednavigation {
-        margin-right:150px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    @media @tablet {
+        display: block;
+        margin-right: 0;
     }
+}
 
 .widget {
     .extendednavigation {
-        float: none;
         position: relative;
-        display: inline-block;
-        float: right;
-        padding:5px 0px;
         z-index:9999;
         @media @tablet {
             background-color: transparent;
@@ -866,33 +865,49 @@ header.bk-header {
 /* COMPANY NAME */
 
 .widget.companyname {
-    display: block;
-    float: left;
     padding:6px 0px;
+    .companyname-wrap {
+        @media @tablet {
+            float: none !important;
+            text-align: center !important;
+        }
+    }
+    a {
+        font-family: @font-swatch10-font-family;
+        font-weight: @font-swatch10-font-weight;
+        color: @font-swatch10-color;
+        line-height: @font-swatch10-line-height;
+        letter-spacing: @font-swatch10-letter-spacing;
+        font-size: @font-swatch10-font-size;
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
 }
 
-.widget.companyname a {
-    font-family: @font-swatch10-font-family;
-    font-weight: @font-swatch10-font-weight;
-    color: @font-swatch10-color;
-    line-height: @font-swatch10-line-height;
-    letter-spacing: @font-swatch10-letter-spacing;
-    font-size: @font-swatch10-font-size;
-    
-}
 
-.widget.companyname a:hover {
-    cursor: pointer;
-    text-decoration: none;
-}
+
+
+
 
 /* LOGO */
 
 .widget.logo {
-    display: block;
-    float: left;
     margin-right:10px;
+    img, .logo, & {
+        line-height: 0;
+    }
 }
+
+.widget.logo, .widget.companyname {
+    display: inline-block;
+    vertical-align: middle;
+    @media @tablet {
+        display: block;
+    }
+}
+
 
 .box {
     width: 45%;
@@ -1437,9 +1452,13 @@ select::-ms-expand {
    =============================== */
 
 .header-right .widget.ecombasket {
+    display: inline-block;
+    vertical-align: middle;
+    @media @tablet {
+        display: block;
+    }
     .ecombasket-pull {
-        position: absolute;
-        float: right;
+        position: relative;
         @media @tablet {
             top: 50px;
         }
