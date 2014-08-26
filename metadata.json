@@ -3,10 +3,7 @@
     "thumbnail":"frames.png",
     "screenshot":"frames.png",
     "templateType":"ecommerce",
-            "pageTypes": [
-        "home",
-        "default"
-    ],
+    "pageTypes": ["home"],
     "tags": {
     "en": ["minimal", "clean", "ecommerce", "glasses", "modern", "sunglasses", "website", "full", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif", "ecommerce"],
