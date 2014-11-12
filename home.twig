@@ -8,6 +8,7 @@
       <header class="bk-header">
           <div class="header-container wrapper clearfix">
             <div class="companyheader clearfix">
+                <div class="flex-container">
                   <div class="header-left">
                       {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                       {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
@@ -16,6 +17,7 @@
                       {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
                       {{widget('ecombasket', 'ecombasket', {})|raw}}
                   </div>
+            </div>
             </div>
           </div>
       </header>

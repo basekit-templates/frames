@@ -1,4 +1,4 @@
 Frames
 =====
 
-BaseKit Eccomerce Template
+BaseKit Ecommerce Theme

@@ -6,11 +6,12 @@
 
 @import "@{templateLocal}/css/common-forms.less";
 
+@import "@{templateLocal}/css/layout-header.less";
+
 // Larget than tablet
 @desktop: ~"only screen and (min-width : 769px)";
 // Larger than mobile
 @mobile-up: ~"only screen and (min-width : 480px)";
-
 
 
 /* 
@@ -75,11 +76,6 @@ h1, h2, h3, h4, h5, p {
 .header-contain {
     min-height:120px;
     background-color:@color-swatch3;
-}
-
-.widget.logo img {
-    max-height:100px;
-    width:auto;
 }
 
 /* ===============================
@@ -167,11 +163,6 @@ header.bk-header {
     padding-top:20px;
 }
 
-.header-container {
-    padding:30px 0px;
-}
-
-
 .content-background {
     background-color:darken(@color-swatch1,5%);
     padding:60px 0px;
@@ -245,7 +236,6 @@ header.bk-header {
             }
         }
 
-
 .companyheader {
         display: block;
         padding: 0;
@@ -271,6 +261,7 @@ header.bk-header {
 
             .header-right {
                 float: right;
+                text-align:right;
                 @media @tablet {
                     float: left;
                 }
@@ -293,8 +284,6 @@ header.bk-header {
             }
         }
 
-
-
 /* ===============================
    TWITTER WIDGET
    =============================== */
@@ -303,7 +292,7 @@ header.bk-header {
 
 .widget.twitter {
   ul.twitter {
-    border:2px solid @color-swatch3;
+    border:1px solid @color-swatch3;
     padding: 30px;
     li {
       position: relative;
@@ -386,8 +375,6 @@ header.bk-header {
    CONTACT FORM WIDGET
    =============================== */
 
-
-
 .contactform.widget {
   fieldset {
     border: none;
@@ -402,7 +389,9 @@ header.bk-header {
   }
 }
 
-
+.contactform input {
+  line-height:0;
+}
 
 // ======= Widget: Sign up form
 .widget.signupform {
@@ -413,7 +402,6 @@ header.bk-header {
     border: 0;
     margin: 0;
   }
-
 
   .form-group {
     // Flex
@@ -446,8 +434,6 @@ header.bk-header {
       -ms-flex-align: center;
       align-items: center;
 
-     
-
       label {
         // Flex
       -webkit-box-ordinal-group: 1;
@@ -474,7 +460,6 @@ header.bk-header {
           width: 100%;
         }
     }
-
     input.email {
        -webkit-box-ordinal-group: 1;
         -moz-box-ordinal-group: 1;
@@ -547,7 +532,7 @@ header.bk-header {
 }
 
 .bk-pt-default .widget.ecombasket .ecombasket-pull {
-    border:2px solid @color-swatch1;
+    border:1px solid @color-swatch1;
 }
 
 /* ===============================
@@ -565,20 +550,41 @@ header.bk-header {
     }
 }
 
-
-
 /* ===============================
    3. FEATURE
    =============================== */
 
-
 .widget {
     &.feature {
+        display: table;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
         .feature-bgimg {
             height: 100%;
+            display: table-row;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 500px; /* height should be in the media query */
         }
         .feature-bgimg .content {
             padding: 12em 2em;
+            display: table-cell;
+            vertical-align: middle;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            .spare {
+            display: block;
+            margin: 0 auto;
+            max-width: 1400px;
+                }
             @media @tablet {
                 padding: 8em 1em;
             }
@@ -618,39 +624,6 @@ header.bk-header {
         }
     }
 }
- 
-.widget {
-    &.feature {
-        display: table;
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        height: 100%;
-        .feature-bgimg {
-            display: table-row;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            min-height: 500px; /* height should be in the media query */
-            .content {
-                display: table-cell;
-                vertical-align: middle;
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-                .spare {
-                    display: block;
-                    margin: 0 auto;
-                    max-width: 1400px;
-                }
-            }
-        }
-    }
-}
 
 .featurebtn-container {
     position: relative;
@@ -670,10 +643,6 @@ header.bk-header {
 .widget.feature button {
     letter-spacing:2px;
 }
-
-
-
-
 
 /* ===============================
    4. MENU SECTIONS NAVIGATION
@@ -917,7 +886,7 @@ header.bk-header {
                 }
 
                 .text {
-                    padding: 15px;
+                    padding: 10px 20px;
                     display: block;
                 }
 
@@ -1096,11 +1065,6 @@ header.bk-header {
         }
     }
 }
-
-
-
-
-
 
 /* LOGO */
 
@@ -1565,27 +1529,6 @@ header.bk-header {
                     width: 100%;
                 }
                 select {
-                    -webkit-appearance: none;
-                    -moz-appearance: window;
-                    appearance: none;
-                    outline: none !important;
-                    -moz-outline-style: none;
-                    border: 2px solid @color-swatch3;
-                    position: relative;
-                    background: transparent;
-                    padding: 10px 23px 10px 10px;
-                    -moz-border-radius: 0px;
-                    -webkit-border-radius: 0px;
-                    border-radius: 0px;
-                    background-image: image('/images/arrow.png');
-                    background-position: right 4% center;
-                    background-repeat: no-repeat;
-                    border: 0;
-                    background-color: @color-swatch1;
-                    -moz-appearance: none;
-                    text-indent: 0.01px;
-                    text-overflow: '';
-                    cursor: pointer;
 select::-ms-expand {
                display: none;
            }
@@ -1602,8 +1545,7 @@ select::-ms-expand {
             }
         }
         .btn {
-            width: 70%;
-            margin: 20px 0;
+            margin: 10px 0;
             position: relative;
             overflow: hidden;
             &.ecom-product-add-to-cart-btn .text:before {
@@ -1659,56 +1601,6 @@ select::-ms-expand {
 
 
 
-
-/* ===============================
-  ECOM
-   =============================== */
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: window;
-    appearance: none;
-    outline: none !important;
-    -moz-outline-style: none;
-    border: 2px solid @color-swatch3;
-    position: relative;
-    background: transparent;
-    padding: 10px 23px 10px 10px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    background-image: image('/images/arrow.png');
-    background-position: right 6% center;
-    background-repeat: no-repeat;
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    cursor: pointer;
-}
-select::-ms-expand {
-   display: none;
-}
-
-.widget.ecomproductslist .ecom-productslist-product .ecom-productlist-info .ecom-productslist-title a {
-    font-family: @font-swatch3-font-family;
-    color: @font-swatch3-color;
-    font-size: @font-swatch3-font-size;
-    font-weight: @font-swatch3-font-weight;
-    line-height: @font-swatch3-line-height;
-}
-
-
-
-a.checkout-empty-link.btn {
-     color: @font-swatch7-color;
-     padding:14px;
-}
-
-.widget.ecombasket.show-content .ecombasket-list-container {
-   min-width: 250px;
-}
-
-
 /* ===============================
   ECOM - BASKET
    =============================== */
@@ -1729,6 +1621,7 @@ a.checkout-empty-link.btn {
         position: absolute;
         float: right;
         top: 40px;
+        min-width:250px;
         @media @tablet {
             float: none;
             position: relative;
@@ -1963,7 +1856,7 @@ a.checkout-empty-link.btn {
     .basket-summary-title {
         text-align: center;
         padding: 1em 0 1em;
-        border:2px solid @color-swatch3;
+        border:1px solid @color-swatch3;
         @media @tablet {
             padding: 1em;
         }
@@ -2208,45 +2101,6 @@ a.checkout-empty-link.btn {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ===============================
    7. FOOTER
@@ -2558,19 +2412,20 @@ footer.bk-footer {
     width: 100%;
 }
 
-
+.blog-post-more-link a:hover {
+  text-decoration: none;
+}
 
 .blog-post-feature-image-wrap {  /* Blog post feature image */
-           background-size: cover;
-           background-repeat: no-repeat;
-           background-position: center;
-           height: 250px;
-           margin-bottom: 20px;
-           img {
-               display: none;
-           }
-       }
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    margin-bottom: 20px;
+    img {
+        display: none;
+    }
+}
 
 .blog-post-sharing {
     margin-top:10px;
@@ -2594,9 +2449,11 @@ footer.bk-footer {
     }
     .title {
         display: block;
+        margin-bottom:5px;
     }
     .content-wrapper {
         background: rgba(0,0,0,0.5);
+        padding:10px;
     }
     .slideshow-widget {
         /* Arrows */
@@ -2634,8 +2491,8 @@ footer.bk-footer {
             border-radius: 4px;
             &:after {
                 color: #fff;
-                letter-spacing: -4px;
-                top: -2px;
+                letter-spacing: 0px;
+                top: -7px;
             }
         }
     }
@@ -2673,14 +2530,8 @@ footer.bk-footer {
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-play:after {
-    top:-10px;
+    top:-7px;
 }
-
-
-
-
-
-
 
 /* ===============================
    FORM
@@ -2693,6 +2544,7 @@ footer.bk-footer {
 .widget.profile form fieldset input {
     width:65%;
     background-color:transparent;
+    line-height:0;
     @media @tablet {
         width: 90%;
     }
@@ -3172,8 +3024,6 @@ blockquote:before {
 }
 
 
-
-
 /* ===============================
    Gallery Widget
    =============================== */
@@ -3219,6 +3069,34 @@ blockquote:before {
         -ms-transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
         transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
+}
+
+// ------------------------------------------
+// #Default page sticky footer
+// ------------------------------------------
+
+.bk-pt-default {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;    
+    min-height: 100vh;
+    flex-direction: column;
+     -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    @media @tablet {
+        display: initial;
+    }
+}
+
+.bk-pt-default .canvas {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 
