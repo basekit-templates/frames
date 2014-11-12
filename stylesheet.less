@@ -262,6 +262,8 @@ header.bk-header {
             .header-right {
                 float: right;
                 text-align:right;
+                display:inline-block!important;
+                width:70%;
                 @media @tablet {
                     float: left;
                 }
@@ -449,6 +451,7 @@ header.bk-header {
         -webkit-align-self: auto;
         -ms-flex-item-align: auto;
         align-self: auto;
+        width:100%;
 
       // Layout
         float: none;
@@ -797,6 +800,7 @@ header.bk-header {
     display: inline-block;
     vertical-align: middle;
     margin-right: 20px;
+    width:70%;
     @media @tablet {
         display: block;
         margin-right: 0;
@@ -2110,12 +2114,10 @@ footer.bk-footer {
     min-height: 100px;
     background-color: @color-swatch3;
     padding:3em 0 4em 0;
-    text-align:center;
     margin-top:20px;
         .widget.content {
             padding: 1em 0em 0em 0em;
             margin: 0 auto;
-            text-align:center;
             @media only screen and (max-width: 1084px) {
             width: 93%;
             }
@@ -2125,7 +2127,6 @@ footer.bk-footer {
                     font-weight: @font-swatch9-font-weight;
                     line-height:@font-swatch9-line-height;
                     color: @font-swatch9-color;
-                    padding:0px 10px;
                 }
             @media @tablet {
                 width:auto;
@@ -2148,6 +2149,7 @@ footer.bk-footer {
                 float:left;
                 width:33%;
                 padding:30px 50px 0px 0px;
+                text-align:left;
                 .widget.profile span {
                     float:left;
                 }
@@ -2168,6 +2170,7 @@ footer.bk-footer {
                 float:right;
                 width:33%;
                  padding:30px 50px 0px 0px;
+                 text-align:left;
                 .widget.profile span {
                     float:right;
                 }
@@ -2189,6 +2192,7 @@ footer.bk-footer {
                 float:left;
                 width:33%;
                  padding:0px 50px 0px 0px;
+                 text-align:left;
                 .widget.profile span {
                     float:left;
                 }
@@ -2320,6 +2324,7 @@ footer.bk-footer {
             -webkit-align-self: auto;
             -ms-flex-item-align: auto;
             align-self: auto;
+            width:100%;
             // Appearance
             margin-bottom: 0;
             @media @mobile {
