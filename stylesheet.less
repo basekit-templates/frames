@@ -496,6 +496,9 @@ header.bk-header {
   }
 }
 
+.widget.signupform .form-group label {
+  width:100%;
+}
 
 /* ===============================
    2. DEFAULT PAGE
@@ -507,7 +510,7 @@ header.bk-header {
 
 .bk-pt-default .bk-header {
     background-color:@color-swatch3;
-    margin-bottom:20px;
+    padding-bottom:20px;
 }
 
 .bk-pt-default .featurebtn-container {
@@ -804,6 +807,7 @@ header.bk-header {
     @media @tablet {
         display: block;
         margin-right: 0;
+        width:100%;
     }
 }
 
@@ -1021,20 +1025,6 @@ header.bk-header {
 
 .widget .extendednavigation ul.align-center li:hover li {
     text-align:left;
-}
-
-.widget .extendednavigation a.pull:after {
-    content: "";
-    background: image('/images/nav-icon.png') no-repeat; 
-    width: 18px;
-    height: 20px;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    left:auto;
-    border-radius:0;
-    box-shadow:none;
-    margin-top:20px; 
 }
 
 .widget .extendednavigation ul li.folder:after {
@@ -2208,6 +2198,7 @@ footer.bk-footer {
                     margin-top:0;
                     margin-bottom:10px;
                     padding:0;
+                    text-align:center;
                 }
             }
         }
@@ -2421,15 +2412,29 @@ footer.bk-footer {
   text-decoration: none;
 }
 
-.blog-post-feature-image-wrap {  /* Blog post feature image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 250px;
-    margin-bottom: 20px;
-    img {
-        display: none;
-    }
+.blog-post-list .blog-post-feature-image-wrap {
+  width: 40%;
+  margin-right: 3%;
+  float: left;
+  z-index: 0;
+  background-image: none !important;
+  height: auto;
+  min-height: auto;
+  img {
+      display: block;
+  }
+  @media @tablet {
+    width: 100%;
+    margin-bottom:20px;
+  }
+}
+
+.blog-post-summary {
+  margin-bottom:10px;
+}
+
+.blog-post-feature-image-wrap {
+  background-image:none!important;
 }
 
 .blog-post-sharing {
@@ -2728,7 +2733,7 @@ blockquote:before {
     .widget .extendednavigation a.pull:after {
         content: "";
         background: image('/images/nav-icon.png') no-repeat; 
-        width: 18px;
+        width: 25px;
         height: 20px;
         display: inline-block;
         position: absolute;
@@ -3102,6 +3107,11 @@ blockquote:before {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+}
+
+.page-zones__template-widgets__ecombasket-ecombasket-bk-overlay {
+  top:50px;
+  min-height:45px;
 }
 
 
